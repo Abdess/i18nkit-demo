@@ -1,4 +1,4 @@
-import { ApplicationConfig, isDevMode, provideBrowserGlobalErrorListeners } from '@angular/core';
+import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { provideHttpClient } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { providePrimeNG } from 'primeng/config';
@@ -20,8 +20,7 @@ export const appConfig: ApplicationConfig = {
       config: {
         availableLangs: ['fr', 'en'],
         defaultLang: 'fr',
-        reRenderOnLangChange: true,
-        prodMode: !isDevMode()
+        reRenderOnLangChange: true
       },
       loader: TranslocoHttpLoader
     })

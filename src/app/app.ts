@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { Button } from 'primeng/button';
 
 @Component({
@@ -7,6 +7,4 @@ import { Button } from 'primeng/button';
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
-export class App {
-  protected readonly title = signal('transloco');
-}
+export class App {}

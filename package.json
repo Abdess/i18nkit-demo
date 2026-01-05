@@ -6,7 +6,13 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "extract": "i18nkit",
+    "extract:watch": "i18nkit --watch",
+    "extract:apply": "i18nkit --lang fr --auto-apply",
+    "extract:sync": "i18nkit --check-sync",
+    "translate": "i18nkit --translate fr:en",
+    "i18n": "i18nkit --lang fr --auto-apply && i18nkit --translate fr:en"
   },
   "prettier": {
     "printWidth": 100,
@@ -40,9 +46,11 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
+    "@abdess76/i18nkit": "^1.0.3",
     "@angular/build": "^21.0.4",
     "@angular/cli": "^21.0.4",
     "@angular/compiler-cli": "^21.0.0",
+    "prettier": "^3.7.4",
     "typescript": "~5.9.2"
   }
 }

@@ -46,7 +46,7 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@abdess76/i18nkit": "^1.0.3",
+    "@abdess76/i18nkit": "^1.0.5",
     "@angular/build": "^21.0.4",
     "@angular/cli": "^21.0.4",
     "@angular/compiler-cli": "^21.0.0",

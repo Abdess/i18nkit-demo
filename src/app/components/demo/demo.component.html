@@ -4,8 +4,8 @@
   <p-card header="Formulaire">
     <p-fluid>
       <div class="flex flex-col gap-3">
-        <input pInputText [(ngModel)]="name" placeholder="Nom" />
-        <input pInputText [(ngModel)]="email" placeholder="Adresse email" />
+        <input pInputText [(ngModel)]="name" placeholder="Nom" aria-label="Nom" />
+        <input pInputText [(ngModel)]="email" placeholder="Adresse email" aria-label="Adresse email" />
         <p-select
           [options]="cities"
           [(ngModel)]="selectedCity"

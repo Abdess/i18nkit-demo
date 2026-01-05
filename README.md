@@ -32,13 +32,13 @@ Rafraîchir la page. Le multilingue fonctionne.
 
 Workflow classique i18n :
 
-```
+```text
 Code → Identifier textes → Créer clés → Modifier templates → Créer JSON → Traduire → Vérifier
 ```
 
 Avec i18nkit :
 
-```
+```text
 Code → npm run i18n → Terminé
 ```
 
@@ -66,7 +66,7 @@ npm run extract
 
 Résultat :
 
-```
+```text
 Files scanned:     5
 Strings found:     8
 
@@ -161,17 +161,17 @@ ng add @jsverse/transloco
 
 ## Transformations supportées
 
-| Source | Attribut | Contexte |
-|--------|----------|----------|
-| `h1` à `h6` | contenu | titles |
-| `p`, `span`, `div` | contenu | text |
-| `button`, `p-button` | label | buttons |
-| `label` | contenu | labels |
-| `input` | placeholder | placeholders |
-| `p-card`, `p-dialog` | header | titles |
-| `p-message` | text | messages |
-| `p-tag` | value | labels |
-| tout élément | pTooltip | tooltips |
+| Source               | Attribut    | Contexte     |
+| -------------------- | ----------- | ------------ |
+| `h1` à `h6`          | contenu     | titles       |
+| `p`, `span`, `div`   | contenu     | text         |
+| `button`, `p-button` | label       | buttons      |
+| `label`              | contenu     | labels       |
+| `input`              | placeholder | placeholders |
+| `p-card`, `p-dialog` | header      | titles       |
+| `p-message`          | text        | messages     |
+| `p-tag`              | value       | labels       |
+| tout élément         | pTooltip    | tooltips     |
 
 ### Structure des clés
 
@@ -181,14 +181,14 @@ Exemple : `demo.buttons.envoyer`
 
 ## Commandes
 
-| Commande | Description |
-|----------|-------------|
-| `i18nkit` | Extraction (rapport) |
+| Commande                         | Description                 |
+| -------------------------------- | --------------------------- |
+| `i18nkit`                        | Extraction (rapport)        |
 | `i18nkit --lang fr --auto-apply` | Extraction + transformation |
-| `i18nkit --translate fr:en` | Traduction |
-| `i18nkit --watch` | Mode watch |
-| `i18nkit --check-sync` | Vérification sync |
-| `i18nkit --dry-run` | Prévisualisation |
+| `i18nkit --translate fr:en`      | Traduction                  |
+| `i18nkit --watch`                | Mode watch                  |
+| `i18nkit --check-sync`           | Vérification sync           |
+| `i18nkit --dry-run`              | Prévisualisation            |
 
 ## Traduction
 

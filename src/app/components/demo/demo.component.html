@@ -1,0 +1,31 @@
+<div class="flex flex-col gap-4 max-w-2xl mx-auto">
+  <p-message severity="info" text="Bienvenue dans la démonstration Transloco." />
+
+  <p-card header="Formulaire">
+    <p-fluid>
+      <div class="flex flex-col gap-3">
+        <input pInputText [(ngModel)]="name" placeholder="Nom" />
+        <input pInputText [(ngModel)]="email" placeholder="Adresse email" />
+        <p-select
+          [options]="cities"
+          [(ngModel)]="selectedCity"
+          optionLabel="name"
+          placeholder="Ville"
+        />
+        <div class="flex items-center gap-2">
+          <p-checkbox inputId="newsletter" [(ngModel)]="newsletter" [binary]="true" />
+          <label for="newsletter">Recevoir la newsletter</label>
+        </div>
+      </div>
+    </p-fluid>
+  </p-card>
+
+  <p-card header="Boutons">
+    <div class="flex flex-wrap gap-2">
+      <p-tag value="Disponible" severity="success" />
+      <p-tag value="En cours" severity="warn" />
+      <p-button label="Envoyer" icon="pi pi-send" />
+      <p-button label="Annuler" severity="secondary" />
+    </div>
+  </p-card>
+</div>

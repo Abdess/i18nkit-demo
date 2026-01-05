@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
-import { Button } from 'primeng/button';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { HeaderComponent } from './components/header/header.component';
+import { DemoComponent } from './components/demo/demo.component';
 
 @Component({
   selector: 'app-root',
-  imports: [Button, HeaderComponent],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [HeaderComponent, DemoComponent],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
 })
 export class App {}

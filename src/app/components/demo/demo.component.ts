@@ -9,6 +9,7 @@ import { Checkbox } from 'primeng/checkbox';
 import { Tag } from 'primeng/tag';
 import { Message } from 'primeng/message';
 
+import { TranslocoPipe } from '@jsverse/transloco';
 interface City {
   name: string;
   code: string;
@@ -17,7 +18,7 @@ interface City {
 @Component({
   selector: 'app-demo',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [FormsModule, Button, Card, InputText, Fluid, Select, Checkbox, Tag, Message],
+  imports: [FormsModule, Button, Card, InputText, Fluid, Select, Checkbox, Tag, Message, TranslocoPipe],
   templateUrl: './demo.component.html',
   host: { class: 'block' },
 })

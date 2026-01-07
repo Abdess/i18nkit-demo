@@ -1,31 +1,31 @@
 <div class="flex flex-col gap-4 max-w-2xl mx-auto">
-  <p-message severity="info" text="Bienvenue dans la démonstration Transloco." />
+  <p-message severity="info" [text]="'demo.messages.bienvenue_dans_la_demonstration_transloco' | transloco" />
 
-  <p-card header="Formulaire">
+  <p-card [header]="'demo.titles.formulaire' | transloco">
     <p-fluid>
       <div class="flex flex-col gap-3">
-        <input pInputText [(ngModel)]="name" placeholder="Nom" aria-label="Nom" />
-        <input pInputText [(ngModel)]="email" placeholder="Adresse email" aria-label="Adresse email" />
+        <input pInputText [(ngModel)]="name" [placeholder]="'demo.placeholders.nom' | transloco" [attr.aria-label]="'demo.placeholders.nom' | transloco" />
+        <input pInputText [(ngModel)]="email" [placeholder]="'demo.placeholders.adresse_email' | transloco" [attr.aria-label]="'demo.placeholders.adresse_email' | transloco" />
         <p-select
           [options]="cities"
           [(ngModel)]="selectedCity"
           optionLabel="name"
-          placeholder="Ville"
+          [placeholder]="'demo.placeholders.ville' | transloco"
         />
         <div class="flex items-center gap-2">
           <p-checkbox inputId="newsletter" [(ngModel)]="newsletter" [binary]="true" />
-          <label for="newsletter">Recevoir la newsletter</label>
+          <label for="newsletter">{{ 'demo.labels.recevoir_la_newsletter' | transloco }}</label>
         </div>
       </div>
     </p-fluid>
   </p-card>
 
-  <p-card header="Boutons">
+  <p-card [header]="'demo.titles.boutons' | transloco">
     <div class="flex flex-wrap gap-2">
-      <p-tag value="Disponible" severity="success" />
-      <p-tag value="En cours" severity="warn" />
-      <p-button label="Envoyer" icon="pi pi-send" />
-      <p-button label="Annuler" severity="secondary" />
+      <p-tag [value]="'demo.labels.disponible' | transloco" severity="success" />
+      <p-tag [value]="'demo.labels.en_cours' | transloco" severity="warn" />
+      <p-button [label]="'demo.buttons.envoyer' | transloco" icon="pi pi-send" />
+      <p-button [label]="'demo.buttons.annuler' | transloco" severity="secondary" />
     </div>
   </p-card>
 </div>

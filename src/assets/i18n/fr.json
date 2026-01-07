@@ -1,0 +1,42 @@
+{
+  "app": {
+    "titles": {
+      "demonstration_transloco": "Démonstration Transloco"
+    },
+    "text": {
+      "angular_primeng_tailwind_css": "Angular + PrimeNG + Tailwind CSS"
+    }
+  },
+  "demo": {
+    "labels": {
+      "recevoir_la_newsletter": "Recevoir la newsletter",
+      "disponible": "Disponible",
+      "en_cours": "En cours"
+    },
+    "placeholders": {
+      "nom": "Nom",
+      "adresse_email": "Adresse email",
+      "ville": "Ville"
+    },
+    "aria": {
+      "nom": "Nom",
+      "adresse_email": "Adresse email"
+    },
+    "buttons": {
+      "envoyer": "Envoyer",
+      "annuler": "Annuler"
+    },
+    "titles": {
+      "formulaire": "Formulaire",
+      "boutons": "Boutons"
+    },
+    "messages": {
+      "bienvenue_dans_la_demonstration_transloco": "Bienvenue dans la démonstration Transloco."
+    }
+  },
+  "header": {
+    "text": {
+      "language": "Language"
+    }
+  }
+}

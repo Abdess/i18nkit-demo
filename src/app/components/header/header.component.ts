@@ -1,19 +1,15 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { TranslocoService } from '@jsverse/transloco';
+import { Router } from '@angular/router';
+import { TranslocoService, TranslocoPipe } from '@jsverse/transloco';
 import { Select } from 'primeng/select';
-
-interface Language {
-  code: string;
-  label: string;
-}
 
 @Component({
   selector: 'app-header',
-  imports: [FormsModule, Select],
+  imports: [FormsModule, Select, TranslocoPipe],
   template: `
     <header class="flex justify-between items-center p-4">
-      <span>Language</span>
+      <span>{{ 'header.text.language' | transloco }}</span>
       <p-select
         [options]="languages"
         [(ngModel)]="selectedLang"
@@ -26,23 +22,18 @@ interface Language {
 })
 export class HeaderComponent {
   private transloco = inject(TranslocoService);
+  private router = inject(Router);
 
-  readonly languages: Language[] = [
-    { code: 'fr', label: 'Français' },
-    { code: 'en', label: 'English' }
-  ];
+  readonly languages = (this.transloco.getAvailableLangs() as string[]).map(code => ({
+    code,
+    label: code.toUpperCase()
+  }));
 
-  selectedLang = localStorage.getItem('lang') ?? this.transloco.getActiveLang();
+  selectedLang = this.transloco.getActiveLang();
 
-  constructor() {
-    const savedLang = localStorage.getItem('lang');
-    if (savedLang) {
-      this.transloco.setActiveLang(savedLang);
-    }
-  }
-
-  onLangChange(lang: string): void {
-    this.transloco.setActiveLang(lang);
-    localStorage.setItem('lang', lang);
+  onLangChange(newLang: string): void {
+    const currentUrl = this.router.url;
+    const newUrl = currentUrl.replace(/^\/[^/]+/, `/${newLang}`);
+    this.router.navigateByUrl(newUrl);
   }
 }
